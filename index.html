@@ -19,46 +19,53 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="columns">
-            <div class="column">
-                <div class="card column is-one-third is-offset-one-third">
-                    <img src="https://media.istockphoto.com/photos/table-tennis-equipment-picture-id1192307192?b=1&k=20&m=1192307192&s=170667a&w=0&h=zPZsq3-ehwsxh2waz0c31cggWRYiBmChmVeJXefYDM4=" alt="">
-                    <header class="card-header">
-                        <p class="card-header-title">
-                            Ping Pong Score Keeper
-                        </p>
-                    </header>
-                    <div class="card-content">
-                        <div class="content">
-                            <h1 class="title is-size-1"><span id="p1score">0</span> to <span id="p2score">0</span></h1>
-                            <p class="title is-size-5">Use buttons below to keep score</p>
-                        </div>
-                        <div class="content">
-                            <p class="title is-size-5" id="paragraph">
-                                Playing to
-                                <span class="select is-rounded is-small">
-                                    <select class="select is-multiple " name="playingto" id="playingto">
-                                        <option value="">Select</option>
-                                        <option value="3">3</option>
-                                        <option value="5">5</option>
-                                        <option value="7">7</option>
-                                        <option value="10">10</option>
-                                    </select>
-                                </span>
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column">
+                    <div class="card column is-one-third is-offset-one-third">
+                        <figure class="image is-2by1">
+                            <img class="image"
+                                src="https://media.istockphoto.com/photos/digital-scoreboard-in-court-picture-id1253708454?b=1&k=20&m=1253708454&s=170667a&w=0&h=isQUT_12HLwCO2kuhjjlGJF7bFTTVidQprHw5UXPdm0="
+                                alt="">
+                        </figure>
+                        <header class="card-header">
+                            <p class="card-header-title">
+                                Score Keeper
                             </p>
-                            
+                        </header>
+                        <div class="card-content">
+                            <div class="content">
+                                <h1 class="title is-size-1"><span id="p1score">0</span> to <span id="p2score">0</span>
+                                </h1>
+                                <p class="title is-size-5">Use buttons below to keep score</p>
+                            </div>
+                            <div class="content">
+                                <p class="title is-size-5" id="paragraph">
+                                    Playint to
+                                    <span class="select is-rounded is-small">
+                                        <select class="select is-multiple " name="playingto" id="playingto">
+                                            <option value="">Select</option>
+                                            <option value="3">3</option>
+                                            <option value="5">5</option>
+                                            <option value="7">7</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </span>
+                                </p>
+
+                            </div>
                         </div>
+                        <footer class="card-footer">
+                            <button id="p1b" class="button is-primary card-footer-item is-outlined">+1 Player One</button>
+                            <button id="p2b" class="button is-info card-footer-item is-outlined">+1 Player Two</button>
+                            <button id="reset" class="button is-danger card-footer-item is-outlined">Reset</button>
+                        </footer>
                     </div>
-                    <footer class="card-footer">
-                        <button id="p1b" class="button is-primary card-footer-item">+1 Player One</button>
-                        <button id="p2b" class="button is-info card-footer-item">+1 Player Two</button>
-                        <button id="reset" class="button is-danger card-footer-item">Reset</button>
-                    </footer>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <script src="app.js"></script>
 </body>
 

@@ -19,48 +19,57 @@ let newVal = document.createElement('p');
 newVal.innerText = playingto.value;
 paragraph.append(newVal);
 
-p1plus.addEventListener('click',function(){
+p1plus.addEventListener('click', function () {
 
-    if(!isGameOver){
+    if (!isGameOver) {
         p1score++;
 
-        if(p1score === winScore){
+        if (p1score === winScore) {
             isGameOver = true;
-            p1.classList.add('winner');
-            p2.classList.add('loser');
+            p1.classList.add('has-text-success');
+            p2.classList.add('has-text-danger');
+            
+            p1plus.disabled = true;
+            p2plus.disabled = true;
         }
         p1.textContent = p1score;
     }
 })
-p2plus.addEventListener('click',function(){
+p2plus.addEventListener('click', function () {
 
-    if(!isGameOver){
+    if (!isGameOver) {
         p2score++;
 
-        if(p2score === winScore){
+        if (p2score === winScore) {
             isGameOver = true;
-            p2.classList.add('winner');
-            p1.classList.add('loser');
+            p2.classList.add('has-text-success');
+            p1.classList.add('has-text-danger');
+            
+            p1plus.disabled = true;
+            p2plus.disabled = true;
         }
         p2.textContent = p2score;
     }
 })
 
-playingto.addEventListener('change',function(){
-    
+playingto.addEventListener('change', function () {
+
     winScore = parseInt(this.value);
     resetfun();
 })
 
-reset.addEventListener('click' , resetfun)
+reset.addEventListener('click', resetfun)
 
 
-function resetfun(){
+function resetfun() {
     isGameOver = false;
     p1score = 0;
     p2score = 0;
     p1.textContent = 0;
     p2.textContent = 0;
-    p1.classList.remove('winner','loser'); 
-    p2.classList.remove('winner','loser'); 
+    p1.classList.remove('has-text-success', 'has-text-danger');
+    p2.classList.remove('has-text-success', 'has-text-danger');
+
+    p1plus.disabled = false;
+    p2plus.disabled = false;
 }
